@@ -1,6 +1,7 @@
 button{
     background-color: #3399ff;
     color:#fff;
+    float:right;
 }
 form{
     width: 30%;

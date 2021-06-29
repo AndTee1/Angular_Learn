@@ -14,6 +14,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
+import { SigninComponent } from './signin/signin.component';
+import { DetailsComponent } from './details/details.component';
 
 
 
@@ -23,7 +25,9 @@ import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
     AppComponent,
     AddComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    SigninComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +40,11 @@ import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule ,
     RouterModule.forRoot([
-      {path: "", component: ListComponent},
+      {path: "", component: SigninComponent},
+      {path: "list",component: ListComponent},
       {path:"add",component:AddComponent},
-      {path:"edit/:id",component:EditComponent}
+      {path:"edit/:id",component:EditComponent},
+      {path:"details/:id",component:DetailsComponent}
     ])
   
    

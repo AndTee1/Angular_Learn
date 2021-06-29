@@ -1,0 +1,16 @@
+<div class="container">
+    <form class="example-form" >    
+        <mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Ex:21/12/2000" id="name"   required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" id="pass"  required >
+          </mat-form-field>
+          <button mat-button (click)="isSignin()" >Đăng Nhập</button>
+         <p  class="error" id="error">Sai thông tin đăng nhập</p>
+      </form>
+     
+</div>
+

@@ -11,6 +11,10 @@
         <mat-label>Address</mat-label>
         <input matInput placeholder="Ex:New York"[(ngModel)]="studentDetail.Address" name="Address"required>
       </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Ex:New York"[(ngModel)]="studentDetail.Password" name="Address"required>
+      </mat-form-field>
       <button mat-button (click)="Edit(studentDetail.id)" routerLink="/">Edit</button>|
   </form>
   

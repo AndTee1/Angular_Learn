@@ -26,7 +26,7 @@ export class ListComponent  {
         this.listStudent = res;
       })
     }
-    Delete(a:any){
+    isDelete(a:any){
       this.http.delete('https://60d2bc7b858b410017b2e1fd.mockapi.io/customer/' + a.id).subscribe(
         res => {
           console.log(res);
@@ -43,5 +43,13 @@ export class ListComponent  {
       })
 
     }    
+    isDetails(item:any){
+      this.http.get('https://60d2bc7b858b410017b2e1fd.mockapi.io/customer/' + item.id).subscribe(res =>{
+        console.log(res);
+        this.listStudent=res;
+        this.router.navigate(['/details', item.id]).then();
+      })
+
+    }
 
   }

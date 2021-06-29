@@ -1,0 +1,31 @@
+.container{
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 500px;
+    min-height: 500px;
+    position: relative;
+    background-color: rgba(255, 230, 230, 0.2);
+}
+form{
+    position: absolute;
+    top:50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+   
+
+}
+form mat-form-field{
+    width: 100%;
+   
+}
+button{
+    color: #fff;
+    background-color: #1aa3ff;
+}
+.error{
+    display: none;
+    color: red;
+}
