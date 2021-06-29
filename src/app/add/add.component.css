@@ -1,0 +1,19 @@
+button{
+    background-color: #3399ff;
+    color:#fff;
+}
+form{
+    width: 30%;
+    display: block;
+    float: left;
+}
+.mat-form-field{
+    width: 100%;
+}
+label{
+    display: none;
+}
+.active{
+    display: block;
+    color: red;
+}

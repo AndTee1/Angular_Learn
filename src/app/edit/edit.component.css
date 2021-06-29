@@ -1,0 +1,13 @@
+form{
+    width: 30%;
+    display: block;
+    float: left;
+}
+form .mat-form-field{
+    width: 100%;
+    font-size: 24px;
+}
+button{
+    background-color: #3399ff;
+    color:#fff;
+}

@@ -1,0 +1,16 @@
+<form class="example-form" *ngIf = "studentDetail" >    
+    <mat-form-field class="example-full-width" >
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Ex:21/12/2000" [(ngModel)]="studentDetail.name" name="name" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="Ex:AndTee" [(ngModel)]="studentDetail.Phone" name="Phone" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Ex:New York"[(ngModel)]="studentDetail.Address" name="Address"required>
+      </mat-form-field>
+      <button mat-button (click)="Edit(studentDetail.id)" routerLink="/">Edit</button>|
+  </form>
+  

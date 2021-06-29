@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="header">
+    <h1>Student Manager</h1>
+    <div class="col-sd-12">
+    
+      <button mat-flat-button color="Success" routerLink="add" >Thêm Mới</button>
+    </div>
+
+  </div>
+  <div class="content">
+    <mat-table [dataSource]="listStudent" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Phone">
+        <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Phone}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Address">
+        <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.Address}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Delete">
+        <mat-header-cell *matHeaderCellDef> Chức năng </mat-header-cell>
+        <mat-cell *matCellDef="let element" >
+            <button mat-button (click)="Delete(element)">Delete</button>|
+            <button mat-button (click)="getbyID(element)">Edit</button>
+         </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+  
+
+</div>
+
+  
+  
