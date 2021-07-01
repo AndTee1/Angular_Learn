@@ -40,7 +40,8 @@ export class EditComponent implements OnInit {
   }
   get studentForm() { return this.student.controls; }
   addNew(){
-    if(this.student.valid){
+    this.submitted=true;
+    if(this.student.valid && this.checkPhoneNumber(this.student.controls.Phone.value)==false){
       this.http.put(this.url +this.StudentId,this.student.getRawValue()).subscribe(res =>{
         console.log(this.studentDetail);
         this.studentDetail=res;

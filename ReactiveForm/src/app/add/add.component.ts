@@ -36,7 +36,7 @@ export class AddComponent implements OnInit {
    
       this.submitted=true;
       
-      if(this.student.valid){
+      if(this.student.valid && this.checkPhoneNumber(this.student.controls.Phone.value)==false){
         this.http.post(('https://60d2bc7b858b410017b2e1fd.mockapi.io/student'), this.student.getRawValue()).subscribe(res =>{
         console.log(res);
         this.router.navigate(['/']).then();
