@@ -1,0 +1,65 @@
+<!-- <form *ngIf="studentDetail"  [formGroup]= "student" (ngSubmit)="addNew()" >
+    <label for="name">Name</label><br>
+    <input type="text" id="name"  formControlName="name"><br>
+    <label for="phone">Phone</label><br>
+    <input type="text" id="phone" formControlName="Phone" ><br>
+    <label for="address">Address</label><br>
+    <input type="text" id="address" formControlName="Address" ><br>
+    <label for="gmail">Gmail</label><br>
+    <input type="text" id="Gmail" formControlName="Gmail" ><br>
+    <button mat-button id="addnew" style="background-color: #0099cc; color: #fff;margin-top: 50px;"routerLink="/add" type="submit" [disabled]="!student.valid">Edit</button>
+  </form> -->
+
+  <form *ngIf="studentDetail"  class="example-form" [formGroup]= "student" (ngSubmit)="addNew()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" >
+      <span class="text-danger"    
+      *ngIf="(studentForm.name.touched || submitted) && studentForm.name.errors?.required">    
+      Name is required    
+    </span>
+    <span class="text-danger"    
+      *ngIf=" submitted && studentForm.name.errors?.pattern">    
+      Name haven't !@#$%^&*    
+    </span> 
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput   formControlName="Phone" >
+      <span class="text-danger"    
+      *ngIf="(studentForm.Phone.touched || submitted) && studentForm.Phone.errors?.required">    
+      Phone is required    
+    </span>
+    <span class="text-danger"    
+      *ngIf=" submitted && checkPhoneNumber(studentForm.Phone.value)">    
+     Phone is invalid  
+    </span> 
+    <span class="text-danger"    
+      *ngIf=" submitted && studentForm.Phone.errors?.pattern">    
+     Phone is number  
+    </span>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Address</mat-label>
+      <input matInput  formControlName="Address" >
+      <span class="text-danger"    
+      *ngIf="(studentForm.Address.touched || submitted) && studentForm.Address.errors?.required">    
+      Address is required    
+    </span>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Gmail</mat-label>
+      <input matInput placeholder="*@gmail.com"  formControlName="Gmail" >
+      <span class="text-danger"    
+      *ngIf="(studentForm.Gmail.touched || submitted) && studentForm.Gmail.errors?.required">    
+      Gmail is required    
+    </span>
+    <span class="text-danger"    
+    *ngIf=" submitted && studentForm.Phone.errors?.pattern">    
+      Gmail is invalid  
+    </span>
+    </mat-form-field>
+    <button mat-button id="addnew" style="background-color: #0099cc; color: #fff;margin-top: 50px;" type="submit" (click)="addNew()" >Edit</button>
+  
+   
+  </form>

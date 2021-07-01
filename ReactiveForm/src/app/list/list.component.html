@@ -1,0 +1,60 @@
+<div class="container">
+    <div id="header">
+        <h1 class="header-content">Demo Angular Form</h1>
+        <button mat-button color="white" id="addnew" routerLink="/add"><mat-icon>add_circle</mat-icon>Add New</button>
+        <div class="search">
+            <button mat-button color="white" id="addnew" (click)="getSearch()" ><mat-icon>search</mat-icon>Search</button>
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Search</mat-label>
+            <input matInput id="search" >
+          </mat-form-field>
+
+        </div>
+        
+    </div>
+    <div class="contact">
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        
+            <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+            </ng-container>
+        
+    
+            <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+        
+    
+            <ng-container matColumnDef="phone">
+            <mat-header-cell *matHeaderCellDef> Phone </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Phone}} </mat-cell>
+            </ng-container>
+    
+            <ng-container matColumnDef="address">
+            <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.Address}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="gmail">
+                <mat-header-cell *matHeaderCellDef> Gmail </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.Gmail}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="chucnang">
+                <mat-header-cell *matHeaderCellDef> Chức Năng </mat-header-cell>
+                <mat-cell *matCellDef="let element"> 
+                    
+                <button mat-button color="white" (click)="isDelete(element)"><mat-icon>delete</mat-icon>Delete</button>|
+                <button mat-button color="white" (click)="getbyID(element)"><mat-icon>build</mat-icon>Edit</button>|
+                <button mat-button color="white" (click)="isDetails(element)">Details</button>
+                </mat-cell>
+            </ng-container>
+        
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+</div>
+    
+

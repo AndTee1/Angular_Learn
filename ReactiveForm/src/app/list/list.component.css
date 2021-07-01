@@ -1,0 +1,25 @@
+#header{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+#header #addnew{
+    float: right;
+  margin-right: 100px;
+ 
+}
+.contact{
+    margin-top: 100px;
+}
+button{
+    margin-top: 15px;
+    font-size: 18px;
+    color:#fff;
+    background-color: #0099cc;
+}
+.search{
+    float: left;
+}
+mat-form-field{
+    min-height: 30px;
+}

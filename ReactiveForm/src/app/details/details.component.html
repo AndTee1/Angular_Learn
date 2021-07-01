@@ -1,0 +1,21 @@
+
+<mat-accordion>
+    <div class="contect" *ngIf="studentDetail">
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        This is info {{studentDetail.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+       Click show data
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+   
+        <p>Name : {{studentDetail.name}}</p>
+        <p>Phone: {{studentDetail.Phone}}</p>
+        <p>Address: {{studentDetail.Address}}</p>
+        <p>Gmail: {{studentDetail.Gmail}}</p>
+    
+  </mat-expansion-panel>
+    </div>
+ </mat-accordion>
