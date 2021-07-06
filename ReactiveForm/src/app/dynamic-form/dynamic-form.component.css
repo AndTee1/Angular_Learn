@@ -1,0 +1,14 @@
+form{
+    width: 60%;
+    margin: auto;
+}
+mat-form-field{
+    width: 90%;
+}
+.error{
+    display: none;
+    color: red;
+}
+.text-danger{
+    color: red;
+}

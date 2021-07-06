@@ -17,6 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { DymamicReactiveComponent } from './dymamic-reactive/dymamic-reactive.component';
 
 
 
@@ -27,7 +29,9 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
     ListComponent,
     AddComponent,
     EditComponent,
-    DetailsComponent
+    DetailsComponent,
+    DynamicFormComponent,
+    DymamicReactiveComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
       {path: "", component: ListComponent},
       {path:"add",component:AddComponent},
       {path:"edit/:id",component:EditComponent},
-      {path:"details/:id",component:DetailsComponent}
+      {path:"details/:id",component:DetailsComponent},
+      {path:"dynamic",component:DynamicFormComponent},
+      {path:"dynamic1",component:DymamicReactiveComponent}
     ])
    
   ],
