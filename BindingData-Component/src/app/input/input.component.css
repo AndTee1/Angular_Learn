@@ -1,0 +1,18 @@
+.product {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border: 1px dotted silver;
+}
+.product:hover {
+    color: red;
+    cursor: pointer;
+}
+.contact{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+h1,h2{
+    color: red;
+}

@@ -1,0 +1,24 @@
+<p>service works!</p>
+<p>{{message}}</p>
+<p>
+    {{newcomponent}} 
+  </p>
+  <p>
+    Today's Date : {{todayDate}} 
+  </p>
+  <div class="contact">
+    <h1>{{ title }}</h1>
+    <ul>
+      <li *ngFor="let p of products" class="product" (click)="setSelectProduct(p)">
+          ID {{p.id}}  - {{p.nameproduct}}
+      </li>
+    </ul>
+    <div *ngIf="selectedProduct" style="text-align: left;">
+      <!-- <app-product-detail 
+                [product] = "selectedProduct" 
+                [title]="selectedProduct.nameproduct">
+                (dathangEvent)="notifyMessage($event)">
+        </app-product-detail> -->
+       
+    </div> 
+</div>

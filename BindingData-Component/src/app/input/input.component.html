@@ -1,0 +1,20 @@
+<div class="contact">
+    <h1>{{ title }}</h1>
+    {{message}}
+    <em *ngIf="mgs">{{mgs}}</em>
+    <div *ngIf="message">{{message}}</div>
+    <ul>
+      <li *ngFor="let p of products" class="product" (click)="setSelectProduct(p)">
+          ID {{p.id}}  - {{p.nameproduct}}
+      </li>
+    </ul>
+    <div *ngIf="selectedProduct" style="text-align: left;">
+      <p>Có chọn một sản phẩm</p>
+      <app-product-detail 
+            [product] = "selectedProduct" 
+            [title]="selectedProduct.nameproduct" 
+            (dathangEvent)="notifyMessage($event)"
+            (messageEvent)="receiveMessage($event)">
+      </app-product-detail>
+    </div>    
+</div>
